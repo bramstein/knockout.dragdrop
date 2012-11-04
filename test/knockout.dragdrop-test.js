@@ -49,5 +49,18 @@ describe('knockout.dragdrop', function () {
             el.dispatchEvent(createEvent('dragstart'));
             el.dispatchEvent(createEvent('dragend'));
         });
+
+        it('supports setting the effectAllowed property', function (done) {
+            var el = document.getElementById('effect-drag');
+            ko.applyBindings({
+                dragStart: function (zone, data, e) {
+                    expect(zone).to.eql('test');
+                    expect(e.dataTransfer.effectAllowed).to.eql('move');
+                    done();
+                }
+            }, el);
+
+            el.dispatchEvent(createEvent('dragstart'));
+        });
     });
 });
