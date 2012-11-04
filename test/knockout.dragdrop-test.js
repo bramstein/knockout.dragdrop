@@ -27,7 +27,9 @@ describe('knockout.dragdrop', function () {
         it('supports dragStart event', function (done) {
             var el = document.getElementById('start-drag');
             ko.applyBindings({
-                dragStart: function (e) {
+                dragStart: function (zone, data, e) {
+                    expect(zone).to.eql('test');
+                    expect(e).to.not.eql(null);
                     done();
                 }
             }, el);
@@ -37,7 +39,9 @@ describe('knockout.dragdrop', function () {
         it('supports dragEnd event', function (done) {
             var el = document.getElementById('end-drag');
             ko.applyBindings({
-                dragEnd: function (e) {
+                dragEnd: function (zone, data, e) {
+                    expect(zone).to.eql('test');
+                    expect(e).to.not.eql(null);
                     done();
                 }
             }, el);
