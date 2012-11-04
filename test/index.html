@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Drag and Drop tests (Firefox/IE only)</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+    </head>
+    <body>
+        <div id="mocha"></div>
+
+        <!-- TODO: Maybe just move these into vendor? -->
+        <script src="../node_modules/expect.js/expect.js"></script>
+        <script src="../node_modules/mocha/mocha.js"></script>
+        <script src="../node_modules/knockout-client/knockout.debug.js"></script>
+        <script src="../lib/knockout.dragdrop.js"></script>
+        <script src="knockout.dragdrop-test.js"></script>
+        <script>
+            mocha.setup('bdd');
+            mocha.run();
+        </script>
+    </body>
+</html>

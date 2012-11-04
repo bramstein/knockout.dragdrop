@@ -1,0 +1,12 @@
+{
+    "name": "knockout.dragdrop",
+    "version": "0.0.1",
+    "author": "Bram Stein <b.l.stein@gmail.com> (http://www.bramstein.com)",
+    "description": "A HTML5 drag and drop binding for Knockout.",
+    "devDependencies": {
+        "expect.js": "=0.2.0",
+        "mocha": "=1.6.0",
+        "knockout-client": "=2.1.0"
+    },
+    "private": true
+}
