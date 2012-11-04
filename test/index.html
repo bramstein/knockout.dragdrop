@@ -8,14 +8,21 @@
     <body>
         <div id="mocha"></div>
 
-        <!-- TODO: Maybe just move these into vendor? -->
+        <div id="bad-drag" data-bind="dragzone: {}"></div>
+        <div id="simple-drag" data-bind="dragzone: 'test'"></div>
+        <div id="start-drag" data-bind="dragzone: { name: 'test', dragStart: dragStart }"></div>
+        <div id="end-drag" data-bind="dragzone: { name: 'test', dragEnd: dragEnd }"></div>
+        <div id="drag" data-bind="dragzone: { name: 'test', dragStart: dragStart, dragEnd: dragEnd }"></div>
+
         <script src="../node_modules/expect.js/expect.js"></script>
         <script src="../node_modules/mocha/mocha.js"></script>
         <script src="../node_modules/knockout-client/knockout.debug.js"></script>
         <script src="../lib/knockout.dragdrop.js"></script>
-        <script src="knockout.dragdrop-test.js"></script>
         <script>
             mocha.setup('bdd');
+        </script>
+        <script src="knockout.dragdrop-test.js"></script>
+        <script>
             mocha.run();
         </script>
     </body>
