@@ -8,6 +8,12 @@
     <body>
         <div id="mocha"></div>
 
+        <div id="bad-drop" data-bind="dropzone: {}"></div>
+        <div id="simple-drop" data-bind="dropzone: 'test'"></div>
+
+        <div id="enter-dragdrop"><div data-bind="dropzone: { name: 'test', dragEnter: dragEnter }"></div><div data-bind="dragzone: 'test'"></div></div>
+        <div id="leave-dragdrop"><div data-bind="dropzone: { name: 'test', dragLeave: dragLeave }"></div><div data-bind="dragzone: 'test'"></div></div>
+
         <div id="bad-drag" data-bind="dragzone: {}"></div>
         <div id="simple-drag" data-bind="dragzone: 'test'"></div>
         <div id="start-drag" data-bind="dragzone: { name: 'test', dragStart: dragStart }"></div>
